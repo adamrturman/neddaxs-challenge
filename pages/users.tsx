@@ -27,13 +27,18 @@ function Users() {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {users.map(user => (
-            <li key={user.id}>
-              {user.firstName} {user.lastName}
-            </li>
-          ))}
-        </ul>
+        <table style={{width: "100%", borderCollapse: "collapse", marginTop:"10rem"}}>
+            <tbody>
+            {users.map(user => (
+            <tr key={user.id}>
+                <th style={{border: "1px solid black"}}>{user.id}</th>
+                <th style={{border: "1px solid black"}}>{user.firstName}</th>
+                <th style={{border: "1px solid black"}}>{user.lastName}</th>
+                <th style={{border: "1px solid black"}}>{user.email}</th> 
+            </tr>
+          ))} 
+          </tbody>
+        </table>        
       );
     }
   }
