@@ -1,8 +1,9 @@
 import { asyncEndpoint } from 'lib/middleware';
 import db from 'db/models';
 
-const usersRouter = async (req, res) => {
+const userRouter = async (req, res) => {
   if (req.method === 'GET') {
+    console.log("We are here")
     const user = await db.Users.findByPk(req.query.id);
 
     if (!user) {
@@ -18,7 +19,7 @@ const usersRouter = async (req, res) => {
 };
 
 const route = async (req, res) => {
-  await asyncEndpoint(req, res, usersRouter);
+  await asyncEndpoint(req, res, userRouter);
 };
 
 export default route;
