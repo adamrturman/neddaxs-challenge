@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 // Material UI
 import Grid from '@material-ui/core/Grid';
@@ -15,6 +16,7 @@ export default function Index() {
         <Grid container justify="center" spacing={4}>
           <Grid item xs={12}>
             <Box fontSize="1.4rem">Welcome to the home page</Box>
+            <Link href="/users">View all users</Link>
           </Grid>
         </Grid>
       </Section>

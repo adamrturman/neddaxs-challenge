@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { Fragment, useEffect } from 'react';
 import { useState } from 'react'
 import UserTable from '@components/User/UserTable';
+import Link from 'next/link';
 
 
 const User = () => {
@@ -34,6 +35,12 @@ const User = () => {
   return (
     <Fragment>
       <h1>Single User Information</h1>
+      <h2>
+        <Link href="/users">See all users</Link>
+        </h2>
+      <h2>
+        <Link href="/">Homepage</Link>
+      </h2>
       <UserTable user={user} id={router.query.id} />
     </Fragment>
   );

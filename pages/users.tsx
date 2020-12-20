@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react'
-
 import UsersTable from '@components/Users/UsersTable';
+import Link from 'next/link';
 
 function Users() {
     const [error, setError] = useState(null);
@@ -31,6 +31,7 @@ function Users() {
       return (
         <Fragment>
           <h1>Here are all the users</h1>
+          <h2><Link href="/">Back to Homepage</Link></h2>
           <UsersTable users={users}/>
         </Fragment>
         
