@@ -6,6 +6,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Moment from 'react-moment';
 
 const UserTable = (props) => {
   const { user, id } = props;
@@ -18,7 +19,7 @@ const UserTable = (props) => {
   
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="simple table">
+      <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
             <TableCell>User ID</TableCell>
@@ -34,7 +35,7 @@ const UserTable = (props) => {
               <TableCell align="right">{user.firstName}</TableCell>
               <TableCell align="right">{user.lastName}</TableCell>
               <TableCell align="right">{user.email}</TableCell>
-              <TableCell align="right">{user.createdAt}</TableCell>
+              <TableCell align="right"><Moment format="MM/DD/YYYY">{user.createdAt}</Moment></TableCell>
             </TableRow>      
         </TableBody>
       </Table>

@@ -3,6 +3,8 @@ import { Fragment, useEffect } from 'react';
 import { useState } from 'react'
 import UserTable from '@components/User/UserTable';
 import Link from 'next/link';
+import Layout from '@components/Layout/Layout';
+import UserCard from '@components/Cards/UserCard'
 
 
 const User = () => {
@@ -10,6 +12,7 @@ const User = () => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [user, setUser] = useState([])
+  console.log("the user I need", user)
 
   useEffect(() => {
       fetch(`http://localhost:3000/api/v1/users/${router.query.id}`)
@@ -33,16 +36,18 @@ const User = () => {
   }
 
   return (
-    <Fragment>
-      <h1>Single User Information</h1>
-      <h2>
+      <Layout>
+      <h1 style={{marginTop:"5rem", textAlign:"center"}}>{user.firstName}'s Information</h1>
+      {/* <h2>
         <Link href="/users">See all users</Link>
         </h2>
       <h2>
         <Link href="/">Homepage</Link>
-      </h2>
+      </h2> */}
+      <UserCard />
       <UserTable user={user} id={router.query.id} />
-    </Fragment>
+      </Layout>
+
   );
 }
 

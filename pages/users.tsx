@@ -1,6 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import UsersTable from '@components/Users/UsersTable';
 import Link from 'next/link';
+import Layout from '@components/Layout/Layout';
+import Header from '@components/Layout/Header/Header'
+import UsersCard from '@components/Cards/UsersCard'
 
 function Users() {
     const [error, setError] = useState(null);
@@ -29,11 +32,11 @@ function Users() {
       return <div>Loading...</div>;
     } else {
       return (
-        <Fragment>
-          <h1>Here are all the users</h1>
-          <h2><Link href="/">Back to Homepage</Link></h2>
-          <UsersTable users={users}/>
-        </Fragment>
+        <Layout>
+            <h1 style={{marginTop:"5rem", textAlign:"center", backgroundColor:"white", marginBottom:"0"}}>Here are all the users</h1>
+            <UsersCard />
+            <UsersTable users={users}/>
+        </Layout>
         
       );
     }
