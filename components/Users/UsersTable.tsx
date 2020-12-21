@@ -11,11 +11,6 @@ const UsersTable = (props) => {
   const { users } = props;
 
   return (
-    // <table style={{ width: "100%", height: "20rem", marginRight: "2rem", borderCollapse: "collapse", marginTop: "10rem" }}>
-    //   <tbody>
-    //     {users.map(user => <UserRow user={user} />)}
-    //   </tbody>
-    // </table>
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
@@ -25,7 +20,9 @@ const UsersTable = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map(user => <UserRow user={user} />)}
+          {users.map(user => 
+            <UserRow user={user} key={user.id} />
+          )}
         </TableBody>
       </Table>
     </TableContainer>

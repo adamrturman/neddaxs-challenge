@@ -1,8 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import UsersTable from '@components/Users/UsersTable';
-import Link from 'next/link';
 import Layout from '@components/Layout/Layout';
-import Header from '@components/Layout/Header/Header'
 import UsersCard from '@components/Cards/UsersCard'
 
 function Users() {
@@ -15,7 +13,6 @@ function Users() {
         .then(res => res.json())
         .then(
           (result) => {
-            console.log("This is the result of fetch", result) //  returns an array of three objects 
             setIsLoaded(true);
             setUsers(result);
           },

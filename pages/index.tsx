@@ -16,9 +16,9 @@ export default function Index() {
       <Section id="home">
         <Grid container justify="center" spacing={4}>
           <Grid item xs={12}>
-            <Box fontSize="1.4rem"><HomepageCard /></Box>
-            {/* <Box fontSize="1.4rem">Welcome to the home page</Box>
-            <Link href="/users">View all users</Link> */}
+            <Box fontSize="1.4rem">
+              <HomepageCard />
+              </Box>
           </Grid>
         </Grid>
       </Section>

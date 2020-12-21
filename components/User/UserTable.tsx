@@ -9,9 +9,8 @@ import Paper from '@material-ui/core/Paper';
 import Moment from 'react-moment';
 
 const UserTable = (props) => {
-  const { user, id } = props;
-  console.log("this is user", user)
-  console.log("this is id", id)
+  const { user } = props;
+
 
   if(!user.id) {
       return <h1>This user does not exist!</h1>

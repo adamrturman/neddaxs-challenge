@@ -35,15 +35,10 @@ const User = () => {
     return <h1>This user does not exist.</h1>
   }
 
+  //  TODO - fix the inital render with user as empty array throwing the error on line 41
   return (
       <Layout>
-      <h1 style={{marginTop:"5rem", textAlign:"center"}}>{user.firstName}'s Information</h1>
-      {/* <h2>
-        <Link href="/users">See all users</Link>
-        </h2>
-      <h2>
-        <Link href="/">Homepage</Link>
-      </h2> */}
+      <h1 style={{marginTop:"5rem", textAlign:"center"}}>{user.firstName}'s Information</h1>  
       <UserCard />
       <UserTable user={user} id={router.query.id} />
       </Layout>
