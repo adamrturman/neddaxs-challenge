@@ -22,7 +22,6 @@ interface User {
 
 interface Props {
   user: User;
-  // id: string;
 }
 
 const UserTable = (props:Props) => {

@@ -7,8 +7,15 @@
     text-align: center; 
 }
 
+.list {
+    align-items: center;
+    width: 100%;
+    max-width: 360;
+    justify-content: center;
+  }
+
+
 .userCard {
-    background-color: #eee;
     text-align:center; 
     margin: auto;
     margin-bottom: 2rem;
@@ -16,7 +23,7 @@
 }
 
 .usersTable {
-    height: 65vh;
+    height: 55vh;
 }
 
 .userTable {
@@ -26,6 +33,6 @@
 .users {
     background-color: white; 
     margin-bottom: 0;
-    margin-top: 5rem; 
     text-align: center; 
+    padding-top: 5rem;
 }

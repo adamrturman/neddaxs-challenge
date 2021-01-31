@@ -21,8 +21,7 @@ const Search: React.FC<{}> = (props) => {
     }
     return (
         <>
-            <h2>Search for a User by Id</h2>
-            <TextField id="outlined-basic" label="ex. 1" variant="outlined" onChange={handleChange} />
+            <TextField id="outlined-basic" label="Search for User by Id" variant="outlined" onChange={handleChange} />
             <Button onClick={submitId} variant="contained" color="primary">Click</Button>
         </>
     )

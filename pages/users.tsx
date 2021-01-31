@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styles from '../components/style/Style.module.css';
 import UsersTable from '@components/Users/UsersTable';
+import Typography from '@material-ui/core/Typography';
 import Layout from '@components/Layout/Layout';
 import UsersCard from '@components/Cards/UsersCard';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -33,7 +34,7 @@ function Users() {
     } else {
       return (
         <Layout>
-            <h1 className={styles.users}>Here are all the users</h1>
+          <Typography className={styles.users} variant="h1">User List</Typography>
             <UsersCard />
             <UsersTable users={users}/>
         </Layout>
