@@ -8,7 +8,10 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 interface Props {
-  users: {
+  users: User[]
+}
+
+interface User {
     createdAt: string;
     deletedAt: string;
     email: string;
@@ -18,8 +21,6 @@ interface Props {
     password: string;
     roleId: number;
     updatedAt: string;
-    // map?: (user: object) => object;  removed line 38 linting error with this, but not sure if it's necessary
-  } 
 }
 
 const UsersTable: React.FC<Props> = (props) => {

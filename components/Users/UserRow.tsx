@@ -8,10 +8,10 @@ interface Props {
         deletedAt: string;
         email: string;
         firstName: string;
-        id: number;
+        id: string;
         lastName: string;
         password: string;
-        roleId: number;
+        roleId: string;
         updatedAt: string;
     }
 }
@@ -19,10 +19,8 @@ interface Props {
 
 const UserRow:React.FC<Props> = (props) => {
     const { user } = props
-    console.log(props)
 
     return (
-        // <TableRow key={user.id} id={user.id}>    This was throwing a linting error
         <TableRow>
             <TableCell>{user.id}</TableCell>
             <TableCell>

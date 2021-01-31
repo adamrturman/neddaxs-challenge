@@ -1,23 +1,23 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Link from 'next/link'
+import Link from 'next/link';
 
 
 const HomepageCard = () => {
-    return (
-        <Card>
-          <CardContent style={{textAlign:"center"}}>
-            <Typography gutterBottom>
-              Welcome to the Homepage
+  return (
+    <Card>
+      <CardContent style={{ textAlign: "center" }}>
+        <Typography gutterBottom>
+          Welcome to the Homepage
             </Typography>
-            <Typography variant="body2" component="p">
-            <Link href="/users">View all users</Link>
-            <Link href="/search">Search for User By Id</Link>
-            </Typography>
-          </CardContent>
-        </Card>
-      );
+        <Typography variant="body2" component="p">
+          <div><Link href="/users">View all users</Link></div>
+          <div><Link href="/search">Search for User By Id</Link></div>
+        </Typography>
+      </CardContent>
+    </Card>
+  );
 }
 
-export default HomepageCard
+export default HomepageCard;

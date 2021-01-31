@@ -1,4 +1,3 @@
-import UserRow from '../Users/UserRow';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -8,9 +7,26 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Moment from 'react-moment';
 
-const UserTable = (props) => {
+interface User {
+  createdAt: string;
+  deletedAt: string;
+  email: string;
+  firstName: string;
+  id: string;
+  lastName: string;
+  password: string;
+  roleId: string;
+  updatedAt: string;
+}
+
+interface Props {
+  user: User;
+  id: string;
+}
+
+const UserTable = (props:Props) => {
   const { user } = props;
-  
+
   return (
     <TableContainer component={Paper}>
       <Table size="small" aria-label="a dense table">

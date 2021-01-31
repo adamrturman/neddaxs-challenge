@@ -11,6 +11,7 @@ const Footer: React.FC = () => {
       container
       justify="center"
       style={{
+        // position: fixed,
         backgroundColor: theme.palette.primary.main,
         backgroundImage: `radial-gradient(${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
       }}
