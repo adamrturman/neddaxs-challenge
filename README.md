@@ -62,10 +62,10 @@ docker-compose down -v
 2. Have it display the user by that id.
 3. If there is no user with that id display an error.
 
-### Video Demo
+# Video Demo
 ![Neddaxs Code Test Demo](https://user-images.githubusercontent.com/67024033/106401843-07400580-63ec-11eb-9738-e9a98a7324d2.gif)
 
-### Images
+# Images
 
 #### Homepage
 ![Homepage](https://user-images.githubusercontent.com/67024033/106401085-ce059680-63e7-11eb-963e-d50eaa8c1327.png)
