@@ -63,7 +63,7 @@ docker-compose down -v
 3. If there is no user with that id display an error.
 
 ### Video Demo
-[Demo](https://imgur.com/m7OIYUc)
+![Demo](https://imgur.com/m7OIYUc)
 
 ### Images
 
