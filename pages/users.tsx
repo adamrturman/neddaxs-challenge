@@ -3,8 +3,26 @@ import UsersTable from '@components/Users/UsersTable';
 import Layout from '@components/Layout/Layout';
 import UsersCard from '@components/Cards/UsersCard'
 
-function Users() {
-    const [error, setError] = useState(null);
+interface Props {
+  users: {
+      createdAt: string;
+      deletedAt: string;
+      email: string;
+      firstName: string;
+      id: number;
+      lastName: string;
+      password: string;
+      roleId: number;
+      updatedAt: string;
+    }
+    error: {
+      message: string;
+    }
+}
+
+
+const Users: React.FC<Props> = () => {
+    const [error, setError] = useState<boolean | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
 

@@ -10,11 +10,6 @@ import Moment from 'react-moment';
 
 const UserTable = (props) => {
   const { user } = props;
-
-
-  if(!user.id) {
-      return <h1>This user does not exist!</h1>
-  }
   
   return (
     <TableContainer component={Paper}>

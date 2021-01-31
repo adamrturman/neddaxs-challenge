@@ -13,6 +13,7 @@ const HomepageCard = () => {
             </Typography>
             <Typography variant="body2" component="p">
             <Link href="/users">View all users</Link>
+            <Link href="/search">Search for User By Id</Link>
             </Typography>
           </CardContent>
         </Card>

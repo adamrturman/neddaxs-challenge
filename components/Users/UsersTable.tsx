@@ -7,7 +7,22 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-const UsersTable = (props) => {
+interface Props {
+  users: {
+    createdAt: string;
+    deletedAt: string;
+    email: string;
+    firstName: string;
+    id: number;
+    lastName: string;
+    password: string;
+    roleId: number;
+    updatedAt: string;
+    // map?: (user: object) => object;  removed line 38 linting error with this, but not sure if it's necessary
+  } 
+}
+
+const UsersTable: React.FC<Props> = (props) => {
   const { users } = props;
 
   return (
