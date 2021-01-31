@@ -34,7 +34,7 @@ function Users() {
     } else {
       return (
         <Layout>
-          <Typography className={styles.users} variant="h1">User List</Typography>
+          <Typography className={styles.users} variant="h1">List of Users</Typography>
           <Typography className={styles.users} variant="h4">Click a name to view more details</Typography>
             <UsersCard />
             <UsersTable users={users}/>

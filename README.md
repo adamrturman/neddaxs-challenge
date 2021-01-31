@@ -61,3 +61,21 @@ docker-compose down -v
 - https://nextjs.org/docs/routing/dynamic-routes
 2. Have it display the user by that id.
 3. If there is no user with that id display an error.
+
+### Images
+
+#### Homepage
+![Homepage](https://user-images.githubusercontent.com/67024033/106401085-ce059680-63e7-11eb-963e-d50eaa8c1327.png)
+
+
+#### List of Users (/users)
+![List of Users](https://user-images.githubusercontent.com/67024033/106401096-e2e22a00-63e7-11eb-8299-2a3b3aa4c03f.png)
+
+
+#### Single User (/users/[id])
+![Single User](https://user-images.githubusercontent.com/67024033/106401124-0a38f700-63e8-11eb-9442-134178bd1984.png)
+
+#### Error Page (/users/[id] for an id not in the database)
+![Error Page](https://user-images.githubusercontent.com/67024033/106401161-3c4a5900-63e8-11eb-8674-1afdb2008e55.png)
+
+
