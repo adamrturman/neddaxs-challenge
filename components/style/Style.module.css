@@ -1,0 +1,31 @@
+.homePageCard {
+    text-align: center;
+}
+
+.id {
+    margin-top: 5rem; 
+    text-align: center; 
+}
+
+.userCard {
+    background-color: #eee;
+    text-align:center; 
+    margin: auto;
+    margin-bottom: 2rem;
+    width:50%;
+}
+
+.usersTable {
+    height: 65vh;
+}
+
+.userTable {
+    height: 60vh;
+}
+
+.users {
+    background-color: white; 
+    margin-bottom: 0;
+    margin-top: 5rem; 
+    text-align: center; 
+}

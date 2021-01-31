@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
-import { Fragment, useEffect } from 'react';
-import { useState } from 'react'
+import { Fragment, useEffect, useState } from 'react';
 import UserTable from '@components/User/UserTable';
 import Link from 'next/link';
 import Layout from '@components/Layout/Layout';
-import UserCard from '@components/Cards/UserCard'
+import UserCard from '@components/Cards/UserCard';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import styles from '../../components/style/Style.module.css';
 
 interface User {
   createdAt: string;
@@ -59,16 +60,15 @@ const User: React.FC<{}> = () => {
   }, [router.query.id])
 
   if (!isLoaded) {
-    return <h1>Loading....</h1>
+    return <CircularProgress />
   }
 
-  console.log("user", user)
   //  TODO - fix the inital render with user as empty array throwing the error on line 41
   return (
     <Layout>
       { user.id ?
         <Fragment>
-          <h1 style={{ marginTop: "5rem", textAlign: "center" }}>{user.firstName}'s Information</h1>
+          <h1 className={styles.id}>{user.firstName}'s Information</h1>
           <UserCard />
           <UserTable user={user} id={router.query.id} />
         </Fragment> :

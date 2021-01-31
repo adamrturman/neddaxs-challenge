@@ -6,6 +6,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import styles from '../style/Style.module.css';
 
 interface Props {
   users: User[]
@@ -27,7 +28,7 @@ const UsersTable: React.FC<Props> = (props) => {
   const { users } = props;
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer className={styles.usersTable} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>

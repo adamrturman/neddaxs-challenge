@@ -16,7 +16,6 @@ const Search: React.FC<{}> = (props) => {
     }
 
     const submitId = (event: React.MouseEvent<HTMLButtonElement>) => {
-        console.log("submit id")
         event.preventDefault();
         Router.push(`/users/${id}`);
     }

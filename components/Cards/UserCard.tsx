@@ -1,3 +1,4 @@
+import styles from '../style/Style.module.css';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -7,7 +8,7 @@ import Link from 'next/link'
 const UserCard = () => {
     return (
         <Card>
-          <CardContent style={{textAlign:"center", width:"50%", margin:"auto", marginBottom:"2rem", background:"#eee"}}>
+          <CardContent className={styles.userCard}>
             <Typography>
                 <Link href="/">Back to Homepage</Link>
             </Typography>

@@ -1,7 +1,10 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react';
+import styles from '../components/style/Style.module.css';
 import UsersTable from '@components/Users/UsersTable';
 import Layout from '@components/Layout/Layout';
-import UsersCard from '@components/Cards/UsersCard'
+import UsersCard from '@components/Cards/UsersCard';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 function Users() {
     const [error, setError] = useState(null);
@@ -26,11 +29,11 @@ function Users() {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <CircularProgress />;
     } else {
       return (
         <Layout>
-            <h1 style={{marginTop:"5rem", textAlign:"center", backgroundColor:"white", marginBottom:"0"}}>Here are all the users</h1>
+            <h1 className={styles.users}>Here are all the users</h1>
             <UsersCard />
             <UsersTable users={users}/>
         </Layout>

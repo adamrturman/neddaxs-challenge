@@ -6,6 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Moment from 'react-moment';
+import styles from '../style/Style.module.css';
 
 interface User {
   createdAt: string;
@@ -28,7 +29,7 @@ const UserTable = (props:Props) => {
   const { user } = props;
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer className={styles.userTable} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
