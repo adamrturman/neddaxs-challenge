@@ -2,7 +2,6 @@ import { asyncEndpoint } from 'lib/middleware';
 import db from 'db/models';
 
 const userRouter = async (req, res) => {
-  console.log('here', req.query);
   if (req.method === 'GET') {
     const user = await db.Users.findByPk(req.query.id);
 

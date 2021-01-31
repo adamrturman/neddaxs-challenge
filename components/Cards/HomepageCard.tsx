@@ -2,6 +2,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
+import Search from '../Search/Search'
 
 
 const HomepageCard = () => {
@@ -11,10 +12,10 @@ const HomepageCard = () => {
         <Typography gutterBottom>
           Welcome to the Homepage
             </Typography>
-        <Typography variant="body2" component="p">
-          <div><Link href="/users">View all users</Link></div>
-          <div><Link href="/search">Search for User By Id</Link></div>
+        <Typography>
+          <Link href="/users">View all users</Link>
         </Typography>
+          <Search />
       </CardContent>
     </Card>
   );

@@ -3,36 +3,8 @@ import UsersTable from '@components/Users/UsersTable';
 import Layout from '@components/Layout/Layout';
 import UsersCard from '@components/Cards/UsersCard'
 
-interface User {
-  createdAt: string;
-  deletedAt: string;
-  email: string;
-  firstName: string;
-  id: string;
-  lastName: string;
-  password: string;
-  roleId: string;
-  updatedAt: string;
-}
-
-interface Props {
-  user: User;
-}
-
-interface Error {
-  message: string;
-}
-
-interface Props {
-  users: User[];
-  error: Error;
-}
-
-
-const Users: React.FC<Props> = () => {
-    const [error, setError] = useState({
-      message: ''
-    });
+function Users() {
+    const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
 
@@ -50,7 +22,7 @@ const Users: React.FC<Props> = () => {
           }
         )
     }, []);
-
+  
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -67,4 +39,4 @@ const Users: React.FC<Props> = () => {
   }
 
 
-export default Users;
+export default Users

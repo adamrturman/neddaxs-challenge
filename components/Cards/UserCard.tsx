@@ -8,10 +8,10 @@ const UserCard = () => {
     return (
         <Card>
           <CardContent style={{textAlign:"center", width:"50%", margin:"auto", marginBottom:"2rem", background:"#eee"}}>
-            <Typography variant="body2" component="p">
+            <Typography>
                 <Link href="/">Back to Homepage</Link>
             </Typography>
-            <Typography variant="body2" component="p">
+            <Typography>
                 <Link href="/users">View all users</Link>
             </Typography>
           </CardContent>
