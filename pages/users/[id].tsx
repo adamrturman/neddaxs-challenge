@@ -62,7 +62,7 @@ const User: React.FC<{}> = () => {
   }, [router.query.id])
 
   if (!isLoaded) {
-    return <CircularProgress />
+    return <CircularProgress className={styles.spinner} />
   }
 
   //  TODO - fix the inital render with user as empty array throwing the error on line 41
@@ -92,7 +92,7 @@ const User: React.FC<{}> = () => {
             <div className={styles.errorButton}>
             <Link href="/">
               <Button variant="contained" color="primary">
-              Back to Homepage
+              Return to Homepage
               </Button>
             </Link>
             </div>

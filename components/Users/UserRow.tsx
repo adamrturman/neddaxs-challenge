@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+
 
 interface Props {
     user: {
@@ -22,9 +25,13 @@ const UserRow:React.FC<Props> = (props) => {
 
     return (
         <TableRow>
-            <TableCell>{user.id}</TableCell>
             <TableCell>
-                <Link href={`/users/${user.id}`}>{user.firstName}</Link>
+                <Typography >{user.id}</Typography>
+            </TableCell>
+            <TableCell>
+                <Link href={`/users/${user.id}`}>
+                    <Button >{user.firstName}</Button>
+                </Link>
             </TableCell>
         </TableRow>
     );

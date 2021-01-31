@@ -32,12 +32,20 @@
     margin: 2rem;
 }
 
+.spinner {
+    margin: auto;
+    position: relative; 
+}
 
 .userCard {
     text-align:center; 
     margin: auto;
     margin-bottom: 2rem;
     width:50%;
+}
+
+.usersTable {
+    height: 40vh;
 }
 
 .userTable {

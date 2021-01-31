@@ -30,11 +30,12 @@ function Users() {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <CircularProgress />;
+      return <CircularProgress className={styles.spinner} />;
     } else {
       return (
         <Layout>
           <Typography className={styles.users} variant="h1">User List</Typography>
+          <Typography className={styles.users} variant="h4">Click a name to view more details</Typography>
             <UsersCard />
             <UsersTable users={users}/>
         </Layout>

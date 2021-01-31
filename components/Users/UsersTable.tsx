@@ -28,7 +28,7 @@ const UsersTable: React.FC<Props> = (props) => {
   const { users } = props;
 
   return (
-    <TableContainer className={styles.userTable} component={Paper}>
+    <TableContainer className={styles.usersTable} component={Paper}>
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>

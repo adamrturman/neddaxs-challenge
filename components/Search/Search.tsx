@@ -22,12 +22,12 @@ const Search: React.FC<{}> = (props) => {
     }
     return (
         <>
-        <div className={styles.search}>
-            <TextField className={styles.search} id="outlined-basic" label="Search for User by Id" variant="outlined" onChange={handleChange} />
+            <div className={styles.search}>
+                <TextField className={styles.search} id="outlined-basic" label="Search for User by Id" variant="outlined" onChange={handleChange} />
             </div>
             <div>
-            <Button onClick={submitId} variant="contained" color="primary">Search</Button>
-        </div>
+                <Button onClick={submitId} variant="contained" color="primary">Search</Button>
+            </div>
         </>
     )
 }

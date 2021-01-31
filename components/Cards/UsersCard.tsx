@@ -12,7 +12,7 @@ const UsersCard = () => {
       <CardContent className={styles.userCard}>
         <Typography variant="body2" component="p">
           <Link href="/">
-            <Button variant="contained" color="primary">Back to Homepage</Button>
+            <Button variant="contained" color="primary">Return to Homepage</Button>
           </Link>
         </Typography>
       </CardContent>
