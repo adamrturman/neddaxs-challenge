@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Router from 'next/router';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import styles from '../style/Style.module.css'
 
 
 interface State {
@@ -21,8 +22,12 @@ const Search: React.FC<{}> = (props) => {
     }
     return (
         <>
-            <TextField id="outlined-basic" label="Search for User by Id" variant="outlined" onChange={handleChange} />
-            <Button onClick={submitId} variant="contained" color="primary">Click</Button>
+        <div className={styles.search}>
+            <TextField className={styles.search} id="outlined-basic" label="Search for User by Id" variant="outlined" onChange={handleChange} />
+            </div>
+            <div>
+            <Button onClick={submitId} variant="contained" color="primary">Search</Button>
+        </div>
         </>
     )
 }

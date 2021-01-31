@@ -1,3 +1,17 @@
+.blue {
+    color:#1976d2;
+    text-decoration: underline;
+}
+
+.error {
+    height: 85vh;
+    text-align: center;
+}
+
+.errorButton {
+    margin: 5rem 0 5rem 0;
+}
+
 .homePageCard {
     text-align: center;
 }
@@ -12,7 +26,11 @@
     width: 100%;
     max-width: 360;
     justify-content: center;
-  }
+}
+
+.search {
+    margin: 2rem;
+}
 
 
 .userCard {
@@ -22,12 +40,8 @@
     width:50%;
 }
 
-.usersTable {
-    height: 55vh;
-}
-
 .userTable {
-    height: 60vh;
+    height: 55vh;
 }
 
 .users {

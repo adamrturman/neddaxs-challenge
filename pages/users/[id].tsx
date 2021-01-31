@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { Fragment, useEffect, useState } from 'react';
 import UserTable from '@components/User/UserTable';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
 import Layout from '@components/Layout/Layout';
 import UserCard from '@components/Cards/UserCard';
@@ -68,16 +70,32 @@ const User: React.FC<{}> = () => {
     <Layout>
       { user.id ?
         <Fragment>
-          <h1 className={styles.id}>{user.firstName}'s Information</h1>
+          <Typography className={styles.users} variant="h2">
+            {user.firstName}'s Information
+          </Typography>
           <UserCard />
           <UserTable user={user} id={router.query.id} />
         </Fragment> :
         <Fragment>
-          <div style={{ textAlign: "center" }}>
+          <div className={styles.error}>
             <h1>Error: {user.error.message}</h1>
-            <h2>A User with id {router.query.id} does not exist in the database.</h2>
-            <h3><Link href="/users">View all users</Link></h3>
-            <h3><Link href="/">Back to Homepage</Link></h3>
+            <Typography variant="h3">
+              A User with id <span className={styles.blue}>{router.query.id}</span> does not exist in the database.
+            </Typography>
+            <div className={styles.errorButton}>
+            <Link href="/users">
+              <Button variant="contained" color="primary">
+              View all users
+              </Button>
+            </Link>
+            </div>
+            <div className={styles.errorButton}>
+            <Link href="/">
+              <Button variant="contained" color="primary">
+              Back to Homepage
+              </Button>
+            </Link>
+            </div>
           </div>
         </Fragment>
       }
