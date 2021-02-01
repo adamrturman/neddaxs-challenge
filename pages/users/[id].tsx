@@ -8,6 +8,8 @@ import Layout from '@components/Layout/Layout';
 import UserCard from '@components/Cards/UserCard';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import styles from '../../components/style/Style.module.css';
+import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
+
 
 interface User {
   createdAt: string;
@@ -24,6 +26,8 @@ interface User {
 
 interface State {
   user: User;
+  error: Error;
+  isLoaded: (flag: boolean) => void;
 }
 
 interface Error {
@@ -43,7 +47,10 @@ const User: React.FC<{}> = () => {
     lastName: '',
     password: '',
     roleId: '',
-    updatedAt: ''
+    updatedAt: '',
+    error: {
+      message: null
+    }
   })
 
   useEffect(() => {
@@ -62,10 +69,9 @@ const User: React.FC<{}> = () => {
   }, [router.query.id])
 
   if (!isLoaded) {
-    return <CircularProgress className={styles.spinner} />
+    return <LoadingSpinner />
   }
 
-  //  TODO - fix the inital render with user as empty array throwing the error on line 41
   return (
     <Layout>
       { user.id ?

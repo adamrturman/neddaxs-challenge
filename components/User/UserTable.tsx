@@ -22,9 +22,10 @@ interface User {
 
 interface Props {
   user: User;
+  id: string | string[];
 }
 
-const UserTable = (props:Props) => {
+const UserTable = (props: Props) => {
   const { user } = props;
 
   return (

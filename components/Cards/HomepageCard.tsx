@@ -10,7 +10,8 @@ import Link from 'next/link';
 import Search from '../Search/Search'
 
 
-const HomepageCard = () => {
+const HomepageCard: React.FC<{}> = () => {
+  
   return (
     <Card>
       <CardContent className={styles.homePageCard}>

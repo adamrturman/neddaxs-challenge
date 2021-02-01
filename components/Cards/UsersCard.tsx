@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Link from 'next/link'
 
 
-const UsersCard = () => {
+const UsersCard: React.FC<{}> = () => {
   return (
     <Card>
       <CardContent className={styles.userCard}>
@@ -20,4 +20,4 @@ const UsersCard = () => {
   );
 }
 
-export default UsersCard
+export default UsersCard;

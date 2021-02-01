@@ -4,10 +4,32 @@ import UsersTable from '@components/Users/UsersTable';
 import Typography from '@material-ui/core/Typography';
 import Layout from '@components/Layout/Layout';
 import UsersCard from '@components/Cards/UsersCard';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 
+interface User {
+  createdAt: string;
+  deletedAt: string;
+  email: string;
+  firstName: string;
+  id: string;
+  lastName: string;
+  password: string;
+  roleId: string;
+  updatedAt: string;
+  error: Error;
+}
 
-function Users() {
+interface Error {
+  message: string;
+}
+
+interface State {
+  users: User[];
+  error: Error;
+  isLoaded: (flag: boolean) => void;
+}
+
+const Users: React.FC<{}> = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [users, setUsers] = useState([]);
@@ -26,11 +48,14 @@ function Users() {
           }
         )
     }, []);
-  
+
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <CircularProgress className={styles.spinner} />;
+      return (
+        <LoadingSpinner />
+      );
     } else {
       return (
         <Layout>
@@ -44,4 +69,4 @@ function Users() {
   }
 
 
-export default Users
+export default Users;

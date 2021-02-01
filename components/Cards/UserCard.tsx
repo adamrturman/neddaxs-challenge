@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Link from 'next/link'
 
 
-const UserCard = () => {
+const UserCard: React.FC<{}> = () => {
     return (
         <Card>
           <CardContent className={styles.userCard}>
